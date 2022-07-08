@@ -1,0 +1,174 @@
+﻿.repository-img-section {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    margin-top: 5vh;
+}
+
+.repository-img-section-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.repository-img-section-text h2 {
+    width: 100%;
+    margin-bottom: 5vh !important;
+}
+
+.repository-img-section-text h6 {
+    width: 100%;
+    text-align: justify !important;
+}
+
+.repository-img-section img {
+    width: 50%;
+    height: 100%;
+}
+
+#RepositoryHeader {
+    width: 100%;
+    padding: 4.5vh 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid rgb(213, 213, 219);
+}
+
+#RepositoryHeader .complex-input-shared {
+    width: 50%;
+}
+
+#SetsCounter {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.75vw;
+    color: #25265e;
+    text-align: center;
+    margin-bottom: 0vh;
+    cursor: default;
+    width: auto;
+}
+
+#RepositoryItemsList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4.5vh;
+    flex-wrap: wrap;
+}
+
+.set-shortcut {
+    padding: 2.5vh 3vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vh;
+    width: 42.5%;
+    cursor: pointer;
+    text-shadow: none;
+    border-bottom: 2px solid #25265e;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.set-shortcut:hover {
+    border: 2px solid var(--neon-blue);
+    border-radius: 20px;
+}
+
+.set-shortcut:hover .set-title {
+    color: var(--main-blue);
+    text-shadow: 0px 0px 2px var(--main-blue);
+}
+
+.set-shortcut:hover .type-icon {
+    color: #0029CC;
+}
+
+.set-shortcut .set-title {
+    flex: 2;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.5vw;
+    color: #25265e;
+    text-align: center;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.set-shortcut span {
+    font-size: 1.85vw;
+    color: #25265e;
+    padding: 0 2vw;
+    text-align: center;
+}
+
+.set-shortcut span i {
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.set-shortcut .trash-icon {
+    padding: 0 1.1vw !important;
+}
+
+.set-shortcut .trash-icon i {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--main-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-shortcut .trash-icon i:hover {
+    background-color: var(--main-blue) !important;
+    color: white;
+}
+
+#ReposiotryEmptyList {
+    margin-bottom: 4vh;
+    display: none;
+}
+
+.icon-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 2.2vw;
+    color: var(--main-blue);
+    background-color: white;
+    padding: 1vh 2.4vw;
+    border-radius: 18px;
+    outline-offset: 2.5px;
+    outline: 3px solid transparent;
+    border: none;
+    -webkit-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    -moz-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    transition: all 0.5s ease;
+    margin-top: 3.5vh;
+}
+
+.icon-button:hover {
+    outline: 3px solid var(--main-blue);
+    transform: scale(1.05);
+}
+
+.icon-button i {
+    margin-right: 0.4vw;
+    position: relative;
+    top: 1px;
+}

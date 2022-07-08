@@ -1,0 +1,122 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+   <link rel="stylesheet" href="~/css/ExpandedSessionsList.css" asp-append-version="true" />
+}
+
+<div class="container-fluid">
+    <div class="sessions-img-section">
+        <div class="sessions-img-section-text">
+            <h2 class="big-heading">Stworzone <span style="color: #002eef;">Sesje</span></h2>
+            <h6 class="sub-heading">
+                Wybierz i kliknij sesję dla której chcesz zobaczyć prace wszystkich uczniów, którzy wysłali swoje odpowiedzi.
+                Wybraną sesję bedzięsz mógł / mogła potem modyfikować lub usunąć, a odpowiedzi uczniów ocenić.
+            </h6>
+        </div>
+        <img src="~/images/created-sessions-svg.svg" alt="-" />
+    </div>
+    <div id="SessionsHeader">
+        <select class="form-select sorting-select">
+            <option value="1">Ostatnie sesje</option>
+            <option value="2">Sesje według zestawów</option>
+        </select>
+        <div class="input-group complex-input-shared">
+            <input type="text" class="form-control" placeholder="Wpisz tytuł sesji lub zestawu z nią powiązanego..." />
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+    </div>
+    <ul id="SessionsList">
+        <!-- <div class="list-groupper-header">
+            <span>MÓJ NOWY ZESTAW</span>
+            <div class="list-groupper-header-divider"></div>
+        </div>
+        <div class="session-shortcut">
+            <div class="session-shortcut-test-takers">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        1
+                    </div>
+                </div>
+                <span>Oddane Prace Uczniów</span>
+            </div>
+            <div class="session-details">
+                <span class="takers-names">
+                    Adam Duda, Jan Radomski, Janusz Juźwiak, Piotr Małki
+                </span>
+                <span class="session-title">
+                    MOJA NOWA SESJA
+                </span>
+            </div>
+            <div class="session-state session-state-active">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        <i class="fa-solid fa-hourglass"></i>
+                    </div>
+                </div>
+                <span>Sesja Aktywna </br> Pozostało 1 Dzień 10 Godz. 20 min.</span>
+            </div>
+            <a class="session-shortcut-popup" asp-controller="Sessions" asp-action="List">
+                <span>Przejdź do tej sesji</span>
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+            </a>
+        </div>
+        <div class="session-shortcut">
+            <div class="session-shortcut-test-takers">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        1
+                    </div>
+                </div>
+                <span>Oddane Prace Uczniów</span>
+            </div>
+            <div class="session-details">
+                <span class="session-title">
+                    MOJA NOWA SESJA
+                </span>
+            </div>
+            <div class="session-state session-state-finished">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        <i class="fa-solid fa-hourglass"></i>
+                    </div>
+                </div>
+                <span>Sesja Zakończona</span>
+            </div>
+        </div>
+        <div class="session-shortcut">
+            <div class="session-shortcut-test-takers">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        1
+                    </div>
+                </div>
+                <span>Oddane Prace Uczniów</span>
+            </div>
+            <div class="session-details">
+                <span class="session-title">
+                    MOJA NOWA SESJA
+                </span>
+            </div>
+            <div class="session-state session-state-not-started">
+                <div class="outer-circle-div">
+                    <div class="inner-circle-div">
+                        <i class="fa-solid fa-hourglass"></i>
+                    </div>
+                </div>
+                <span>Sesja Rozpocznie Się</span>
+            </div>
+        </div> -->
+    </ul>
+    <div class="empty-list" id="SessionsEmptyList" style="margin-bottom: 3.5vh;">
+        <img src="~/images/empty-svg.svg" alt="-" />
+        <h4>Nic nie znaleziono...</h4>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="~/js/ExpandedSessionsList.js"></script>
+}

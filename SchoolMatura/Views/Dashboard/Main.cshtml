@@ -1,0 +1,196 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+   <link rel="stylesheet" href="~/css/Main.css" asp-append-version="true" />
+}
+
+<div class="container-fluid" id="Wrapper">
+    <!-- <div id="Menu">
+         
+    </div> -->
+    <div id="MainPanel">
+        <div id="MainPanelHeader">
+            <h2 class="text-header">Moje Materiały</h2>
+        </div>
+        <div class="cards-row">
+            <div class="dashboard-card">
+                <div class="dashboard-card-inner-main">
+                    <h4 class="dashboard-card-header">
+                        Dodaj Zestaw <i class="fa-solid fa-angle-right"></i>
+                    </h4>
+                    <div class="dashboard-card-divider"></div>
+                    <p class="dashboard-card-sub-header">
+                        Stwórz nowy zestaw zawierający wymyślone przez Ciebie zadania w odpowiedniej kolejności.
+                    </p>
+                    <img class="dashboard-card-img" src="~/images/add-my-set.png" />
+                </div>
+                <a class="dashboard-card-inner-main-popup" asp-controller="CreateSet" asp-action="NewSetPage">
+                    <span>Dodaj nowy zestaw teraz</span>
+                    <i class="fa-solid fa-square-up-right"></i>
+                </a>
+            </div>
+            <div class="dashboard-card dashboard-card-dark">
+                <div class="dashboard-card-inner-main dashboard-card-inner-main-dark">
+                    <h4 class="dashboard-card-header">
+                        Moje Zestawy <i class="fa-solid fa-angle-right"></i>
+                    </h4>
+                    <div class="dashboard-card-divider"></div>
+                    <p class="dashboard-card-sub-header">
+                        Zobacz listę wszystkich zestawów, które stworzyłeś. 
+                        Edytuj ich zawartość, usuwaj je lub zlecaj je swoim uczniom.
+                    </p>
+                    <img class="dashboard-card-img" src="~/images/my-sets-dashboard.png" />
+                </div>
+                <a class="dashboard-card-inner-main-popup" asp-controller="Repository" asp-action="UserRepository">
+                    <span>Pokaż wszystkie zestawy</span>
+                    <i class="fa-solid fa-square-up-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="recent-elements" id="Sets">
+            <div class="recent-elements-header">
+                <h3 class="text-header">Ostatnio stworzone zestawy</h3>
+            </div>
+            <div class="empty-list" id="NoSetsNotification">
+                <img src="~/images/empty-svg.svg" alt="-" />
+                <h4>Narazie tu pusto...</br> Dodaj pierwszy zestaw na początek</h4>
+            </div>
+        </div>
+        <div class="cards-row">
+            <div class="dashboard-card dashboard-card-semi-dark">
+                <div class="dashboard-card-inner-main">
+                    <h4 class="dashboard-card-header">
+                        Dodaj Zadanie <i class="fa-solid fa-angle-right"></i>
+                    </h4>
+                    <div class="dashboard-card-divider"></div>
+                    <p class="dashboard-card-sub-header">
+                        Dodaj nowe zadanie do swoich zasobów.
+                        Decyduj o jego treści, formie, punktacji czy innych niezbędnych detalach.
+                    </p>
+                    <img class="dashboard-card-img" src="~/images/add-my-exercise.png" />
+                </div>
+                <a class="dashboard-card-inner-main-popup" asp-controller="Exercises" asp-action="New">
+                    <span>Stwórz nowe zadanie teraz</span>
+                    <i class="fa-solid fa-square-up-right"></i>
+                </a>
+            </div>
+            <div class="dashboard-card dashboard-card-dark-alt">
+                <div class="dashboard-card-inner-main dashboard-card-inner-main-dark">
+                    <h4 class="dashboard-card-header">
+                        Moje Zadania <i class="fa-solid fa-angle-right"></i>
+                    </h4>
+                    <div class="dashboard-card-divider"></div>
+                    <p class="dashboard-card-sub-header">
+                        Wyświetl listę stworzonych przez siebie zadań, które możesz połączyć w zestawy, usuwać, edytować i wiele więcej...
+                    </p>
+                    <img class="dashboard-card-img" src="~/images/my-exercises-dashboard.png" />
+                </div>
+                <a class="dashboard-card-inner-main-popup" asp-controller="Exercises" asp-action="List">
+                    <span>Pokaż wszystkie zadania</span>
+                    <i class="fa-solid fa-square-up-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="recent-elements" id="Exercises">
+            <div class="recent-elements-header">
+                <h3 class="text-header">Ostatnio stworzone zadania</h3>
+            </div>
+            <div class="empty-list" id="NoExercisesNotification">
+                <img src="~/images/empty-svg.svg" alt="-" />
+                <h4>Narazie tu pusto...</br> Dodaj pierwsze zadanie na początek</h4>
+            </div>
+        </div>
+    </div>
+    <div id="AdditionalRightPanel">
+        <div class="img-link">
+            <img class="right-panel-big-img" src="~/images/session-img-edit-4.png" />
+            <a class="img-link-popup" asp-controller="Sessions" asp-action="List">
+                <span>Pokaż wszystkie dostępne sesje</span>
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+            </a>
+        </div>
+        <div class="right-panel-header" id="LiveSessionsHeader">
+            <div class="right-panel-header-text">
+                <h3 class="text-header">Aktywne sesje</h3>
+                <p class="text-sub-header">Tutaj znajdziesz wszystkie zlecone przez Ciebie prace, do których można nadsyłać jeszcze odpowiedzi</p>
+            </div>
+            <svg
+            class="ring-big"
+            width="120"
+            height="120">
+                <circle
+                class="ring-big__circle"
+                stroke="blue"
+                stroke-width="5"
+                fill="transparent"
+                r="2.425vw"
+                cx="2.625vw"
+                cy="2.625vw"
+                />
+            </svg>
+            <span class="circle-counter" id="LiveSessionsCounter">0</span>
+        </div>
+        <div class="empty-list" id="NoLiveSessionsNotification" style="margin-bottom: 2.5vh;">
+            <img src="~/images/empty-svg.svg" alt="-" />
+            <h4>Narazie tu pusto... </br> Dodaj pierwszą sesję na początek</h4>
+        </div>
+        <div class="right-panel-header" id="PartiallyGradedStudents" style="margin-top: 5.5vh;">
+            <div class="right-panel-header-text">
+                <h3 class="text-header">Częściowo Ocenione</h3>
+                <p class="text-sub-header">Tutaj znajdziesz prace swoich uczniów, których oceniania jeszcze nie skończyłeś</p>
+            </div>
+            <svg
+            class="ring-big"
+            width="120"
+            height="120">
+                <circle
+                class="ring-big__circle"
+                stroke="blue"
+                stroke-width="5"
+                fill="transparent"
+                r="2.425vw"
+                cx="2.625vw"
+                cy="2.625vw"
+                />
+            </svg>
+            <span class="circle-counter" id="PartiallyGradedStudentsCounter">0</span>
+        </div>
+        <div class="empty-list" id="NoPartiallyGradedStudentsNotification" style="margin-bottom: 2.5vh;">
+            <img src="~/images/empty-svg.svg" alt="-" />
+            <h4>Narazie tu pusto...</h4>
+        </div>
+        <div class="right-panel-header" id="NotGradedStudents" style="margin-top: 5.5vh;">
+            <div class="right-panel-header-text">
+                <h3 class="text-header">Nie Ocenione</h3>
+                <p class="text-sub-header">Tutaj znajdziesz prace swoich uczniów, których nie zacząłeś jeszcze oceniać</p>
+            </div>
+            <svg
+            class="ring-big"
+            width="120"
+            height="120">
+                <circle
+                class="ring-big__circle"
+                stroke="blue"
+                stroke-width="5"
+                fill="transparent"
+                r="2.425vw"
+                cx="2.625vw"
+                cy="2.625vw"
+                />
+            </svg>
+            <span class="circle-counter" id="NotGradedStudentsCounter">0</span>
+        </div>
+        <div class="empty-list" id="NotGradedStudentsNotification" style="margin-bottom: 2.5vh;">
+            <img src="~/images/empty-svg.svg" alt="-" />
+            <h4>Narazie tu pusto...</h4>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="~/js/Main.js"></script>
+}

@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+}
+
+<div class="container-fluid" id="HomeContainer">
+    <div class="row">
+        <div class="col-12" style="position: relative;">
+            <div id="LandingPageHeader">
+                <h1>
+                    Twórz własne <span class="color-bold">zadania</span>, <span class="color-bold">sprawdziany</span> 
+                    oraz <span class="color-bold">zestawy</span> informatyczne dla swoich uczniów
+                </h1>
+                <h3>
+                    Dołącz już dziś i zacznij tworzyć i modyfikować twoje zadania w pełni decydując o ich kształcie.
+                    Determinuj czy mają dotyczyć <span class="color-bold-2">programowania</span> czy <span class="color-bold-2">wiedzy teoretycznej</span>. 
+                    Wybieraj spośród wielu dostępnych typów zadań, a także wiele, wiele więcej...
+                </h3>
+            </div>
+            <button id="LandingPageButton" class="icon-button">
+                <i class="fa-solid fa-angle-right"></i> Rozpocznij Edycję
+            </button>
+            <img src="~/images/bottom-graduation-svg.svg" alt="-" class="full-svg"/>
+        </div>
+    </div>
+    <div id="JoinTestHomeBox">
+        <span>Masz Kod? Wpisz go i zaczynaj!</span>
+        <input type="text" placeholder="Wpisz otrzymany kod..." />
+        <button class="icon-button">
+            Rozwiąż zadania <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button>
+    </div>
+</div>
+<div class="container-fluid" id="HomeContainer">
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <h4>Wielofunkcyjny edytor</h4>
+                <h6>
+                    Twórz rozbudowane treści, zadania i polecenia za pomocą zaawansowanego edytora.
+                    Formatuj swój tekst w dowolny sposób poprzez modyfikację koloru czcionki, jej wielkości czy stylu.
+                    W razie potrzeby uzupełniaj go o dopasowane listy, tabele itp. które pozwolą na lepsze zwizualizowanie polecenia.
+                </h6>
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <img src="~/images/qualities-edit.svg"/>
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <img src="~/images/qualities-types.svg" />
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <h4>Wybór rodzaju pytania</h4>
+                <h6>
+                    Twój zbiór zadań wymaga zastosowania pytań prawda / fałsz, otwartych...?
+                    Podczas tworzenia pytań możesz zdecydować jakiego typu ma ono być. 
+                    Dzięki temu twoje zadanie będą mogły być elastyczne i dopasowane do twoich potrzeb.
+                </h6>
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <h4>Obsługa wielu języków</h4>
+                <h6>
+                    IT.Quest pozwoli Ci na tworzenie zadań, w których odpowiedź stanowi kod źródłowy lub zawierający go plik.
+                    Będziesz mógł swobodnie decydować jakie języki programowania przyjmuje stworzone przez Ciebie pytanie.
+                </h6>
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <img src="~/images/qualities-code.svg" />
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <img src="~/images/qualities-result.svg" />
+            </div>
+        </div>
+        <div class="col-6 qualityField">
+            <div class="qualityFieldInner">
+                <h4>Analiza rezultatów</h4>
+                <h6>
+                    Wyniki uzyskane przez uczniów oraz zrobione przez nich zestawy czy testy - wszystko będziesz miał pod ręką w jednym miejscu.
+                    Dzięki temu będziesz mógł efektywnie analizować rezultaty uzyskane przez swoich uczniów.
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="SuccessfulRegisterModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konto zostało utworzone!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Udało ci się pomyślnie utworzyć konto! Teraz możesz zacząć rozwiązywać swój pierwszy zestaw.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="SuccessfulPasswordResetModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hasło zostało zmienione pomyślnie!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Udało Ci się pomyślnie zmienić hasło do swojego konta. Możesz teraz zalogować się ponownie na swoje konto używając nowego hasła.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="FailedPasswordResetModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hasło nie zostało zmienione!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Link umożliwiający zmianę hasła do twojego konta już wygasł. Spróbuj jeszcze raz poprzez wysłanie nowego linku pozwalającego na zmianę hasła.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="WrongUserCodeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Coś poszło nie tak!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Wpisany przez Ciebie kod dostępu jest nieprawidłowy lub sesja z nim związana już wygasła! Spróbuj ponownie używając innego.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        @if (ViewBag.ShowModal)
+        {
+            <text>
+                var ModalSuccess = new bootstrap.Modal(document.getElementById('SuccessfulRegisterModal'));
+                ModalSuccess.show();
+            </text>
+        }
+    </script>
+    <script>
+        @if (ViewBag.ShowModalNewPassword)
+        {
+            <text>
+                var ModalSuccess = new bootstrap.Modal(document.getElementById('SuccessfulPasswordResetModal'));
+                ModalSuccess.show();
+            </text>
+        }
+    </script>
+    <script>
+        @if (ViewBag.ShowModalNewPasswordError)
+        {
+            <text>
+                var ModalError = new bootstrap.Modal(document.getElementById('FailedPasswordResetModal'));
+                ModalError.show();
+            </text>
+        }
+    </script>
+}

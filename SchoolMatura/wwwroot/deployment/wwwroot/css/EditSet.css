@@ -1,0 +1,7 @@
+﻿.tox {
+    display: none !important;
+}
+
+.displayFlexImportant {
+    display: flex !important;
+}

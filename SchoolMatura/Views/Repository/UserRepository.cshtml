@@ -1,0 +1,53 @@
+﻿@{
+     Layout = "_Layout";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/css/Repository.css" asp-append-version="true" />
+}
+
+<div class="container-fluid">
+    <div class="repository-img-section">
+        <div class="repository-img-section-text">
+            <h2 class="big-heading">Moje <span style="color: #002eef;">Zestawy</span> Zadań</h2>
+            <h6 class="sub-heading">
+                Znajdź docelowy zestaw w poniższej liście lub wyszukaj go po jego tytule.
+                Za pomocą ikony kosza usuwaj wybrane elementy z listy poniżej.
+                Aby zobaczyć szczegóły zestawu lub przejść do jego edycji, kliknij jego miniaturę.
+            </h6>
+        </div>
+        <img src="~/images/repository-svg.svg" alt="-" />
+    </div>
+    <div id="RepositoryHeader">
+        <div class="input-group complex-input-shared">
+            <input type="text" class="form-control" placeholder="Wpisz tytuł zestawu..." />
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <h2 id="SetsCounter">Aktualnie posiadasz <span style="color: #002eef;">10</span> zestawów zadań</h2>
+    </div>
+    <div id="RepositoryItemsList">
+        <!-- <div class="set-shortcut">
+            <span class="type-icon"><i class="fa-regular fa-rectangle-list"></i></span>
+            <h4 class="set-title">My Awesome Set</h4>
+            <span class="trash-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+        <div class="set-shortcut">
+            <span><i class="fa-regular fa-rectangle-list"></i></span>
+            <h4 class="set-title">My Awesome Set</h4>
+            <span class="trash-icon"><i class="fa-solid fa-trash-can"></i></span>
+        </div> -->
+    </div>
+    <div class="empty-list" id="ReposiotryEmptyList">
+        <img src="~/images/empty-svg.svg" alt="-" />
+        <h4>Nic nie znaleziono...</br> Dodaj zestaw na dobry start</h4>
+        <button class="icon-button">
+            <i class="fa-regular fa-folder-open"></i> Stwórz Zestaw
+        </button>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="~/js/Repository.js"></script>
+}

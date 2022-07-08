@@ -1,0 +1,292 @@
+﻿.navbar {
+    margin-bottom: 0px !important;
+}
+
+#SubNavBar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 2.25vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    z-index: 7;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    -webkit-box-shadow: 0px 1px 4px 0px rgb(217, 217, 220);
+    -moz-box-shadow: 0px 1px 4px 0px rgb(217, 217, 220);
+    box-shadow: 0px 4px 15px 6px rgb(0 0 0 / 16%);
+    margin-bottom: 4vh;
+}
+
+#SubNavBar h2 {
+    margin-bottom: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.65vw;
+    padding: 0.5vh 0;
+    text-align: center;
+    color: #25265e;
+    cursor: default;
+}
+
+#SubNavBar span {
+    color: var(--neon-blue);
+    font-weight: 900;
+    margin-left: 8px;
+}
+
+
+.container {
+    margin-bottom: 5vh;
+}
+
+.question-content {
+    margin-bottom: 1.5vh !important;
+}
+
+.user-answer {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--black-alternative);
+    margin-bottom: 3.5vh;
+    cursor: default;
+    width: 100%;
+}
+
+.user-answer .user-answer-header {
+    font-weight: 800;
+    color: var(--main-blue);
+    margin-right: 10px;
+}
+
+.comment {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    border-radius: 20px;
+    color: var(--black-alternative);
+    width: 100%;
+    background-color: white;
+    padding: 12.5px;
+    border: 2px solid rgb(234, 236, 239);
+    outline: none !important;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0px 0px 4px 0px rgb(223 225 232);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(223, 225, 232, 1);
+    box-shadow: 0px 0px 4px 0px rgb(223 225 232);
+}
+
+.comment::placeholder {
+    color: var(--black-alternative);
+    transition: all 0.5s ease-in-out;
+}
+
+.comment:focus {
+    border: 2px solid var(--main-blue);
+}
+
+.comment:focus::placeholder {
+    color: var(--main-blue);
+}
+
+.CodeMirror {
+    margin-bottom: 3.75vh;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.code-buttons {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 6;
+}
+
+.code-buttons button {
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    padding: 4px 8px;
+    border: 1px solid white;
+    margin: 0px 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-buttons button i {
+    margin-left: 4px;
+    position: relative;
+    top: 0.45px;
+}
+
+.code-buttons button:hover {
+    color: rgb(33, 32, 32);
+    background-color: white;
+}
+
+.answer-points {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.answer-points h4 {
+    font-size: 19px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: var(--black-alternative);
+    margin-bottom: 0px;
+    cursor: default;
+}
+
+.answer-points h4 span {
+    color: var(--main-blue);
+}
+
+.answer-points input {
+    font-size: 19px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: var(--main-blue);
+    border: none !important;
+    outline: none !important;
+    margin-left: 7px;
+    margin-right: 5px;
+    width: 54px;
+    text-align: center;
+}
+
+.answer-points input::placeholder {
+    color: var(--main-blue);
+}
+
+.exercise-progress {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+}
+
+.exercise-progress div {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.icon-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 20.5px;
+    color: white;
+    background-color: #6C63FF;
+    padding: 12px 50px;
+    border-radius: 18px;
+    transition: all 0.5s ease;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 6.5vh;
+    border: none;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.icon-button:hover {
+    background-color: white;
+    color: #6C63FF;
+    -webkit-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    -moz-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+}
+
+.icon-button i {
+    margin-right: 6px;
+    margin-left: 6px;
+    position: relative;
+    top: 0.5px;
+}
+
+.file-section-download {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 18px;
+    border: 2px solid rgb(234, 236, 239);
+    margin-top: 5.5px;
+    margin-bottom: 21.5px;
+}
+
+.fixed-div {
+    margin: 0px 10px;
+}
+
+.download-file-button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 21.5px;
+    color: var(--main-blue);
+    margin: 0px;
+    padding: 6px 34px;
+    border-radius: 21.5px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    width: max-content;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    -moz-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-file-button i {
+    position: relative;
+    top: 3.5px;
+    margin-left: 15px;
+}
+
+.download-file-button:hover {
+    background-color: var(--main-blue);
+    color: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.dynamic-div {
+    flex: 2;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.file-description {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 19.5px;
+    color: var(--black-alternative);
+    margin: 5px 0px;
+    cursor: default;
+}
+
+.file-description span {
+    color: var(--main-blue);
+}

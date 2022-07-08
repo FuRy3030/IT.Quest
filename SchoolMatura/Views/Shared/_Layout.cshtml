@@ -1,0 +1,165 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SchoolMatura.Models.AuthModels
+@inject SignInManager<ApplicationUser> SignInManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolMatura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="~/font-awesome/css/all.css" rel="stylesheet">
+    <link href="~/lib/datetimepicker/datetimepicker.css" rel="stylesheet" />
+    <link href="~/code-mirror/codemirror.css" rel="stylesheet" />
+    <link href="~/code-mirror/mdn-like.css" rel="stylesheet" />
+    <link href="~/code-mirror/juejin.css" rel="stylesheet" />
+    <link href="~/code-mirror/yeti.css" rel="stylesheet" />
+    <link href="~/code-mirror/yonce.css" rel="stylesheet" />
+    <link href="~/code-mirror/xq-light.css" rel="stylesheet" />
+    <link href="~/code-mirror/nord.css" rel="stylesheet" />
+    <link href="~/data-tables/datatables.min.css" rel="stylesheet" />
+    <link href="~/data-tables/dataTables.bootstrap5.css" rel="stylesheet" />
+    <link href="~/data-tables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/data-tables/responsive.bootstrap5.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery-ui.css" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header id="NavBar">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <img id="Logo" class="navbar-brand" src="~/images/logo-quest-white.png" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @{
+                        if (SignInManager.IsSignedIn(User))
+                        {
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" asp-controller="Dashboard" asp-action="Main">
+                                        Strona Główna
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" href="#" role="button" id="FirstMenuLink" data-bs-toggle="dropdown">
+                                        Moje materiały <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-my-materials" aria-labelledby="FirstMenuLink">
+                                        <div class="dropdown-navbar-header">
+                                            <h4 class="dropdown-navbar-header-active show-sets">Stworzone Zestawy</h4>
+                                            <h4 class="show-exercises">Stworzone Zadania</h4>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="navbar-empty" id="SetsNavbarEmpty">
+                                            <i class="fa-solid fa-face-sad-tear"></i>
+                                            <span>Nie stworzyłeś jeszcze żadnego zestawu</span>
+                                        </div>
+                                        <div class="navbar-empty" id="ExercisesNavbarEmpty">
+                                            <i class="fa-solid fa-face-sad-tear"></i>
+                                            <span>Nie stworzyłeś jeszcze żadnego zadania</span>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" href="#" role="button" id="CreateNavBarButton" data-bs-toggle="dropdown">
+                                        Stwórz <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-create-action" aria-labelledby="CreateNavBarButton">
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Exercises" asp-action="New">
+                                                <i class="fa-solid fa-circle-question"></i> Zadanie
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="CreateSet" asp-action="NewSetPage">
+                                                <i class="fa-regular fa-clone"></i> Zestaw
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" asp-controller="Sessions" asp-action="List">
+                                        Wyniki Uczniów
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" asp-controller="StudentsResults" asp-action="Sessions">
+                                        Eksportuj
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav d-flex justify-content-end">
+                                <li class="nav-item">
+                                    @using (Html.BeginForm("Logout", "Auth", FormMethod.Post))
+                                    {
+                                        <button class="btn-primary btn navbar-button">
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i> Wyloguj się
+                                        </button>
+                                    }       
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link navbar-link" asp-controller="Home" asp-action="Index">
+                                        Strona Główna
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav d-flex justify-content-end">
+                                <li class="nav-item">
+                                    <a class="btn btn-primary navbar-button" asp-controller="Auth" asp-action="Login">
+                                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Zaloguj się
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary navbar-button" asp-controller="Auth" asp-action="Register">
+                                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Zarejestruj się
+                                    </a>
+                                </li>
+                            </ul>
+                        }
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SchoolMatura - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery-ui.js"></script>
+    <script src="~/code-mirror/codemirror.js"></script>
+    <script src="~/code-mirror/python.js"></script>
+    <script src="~/code-mirror/clike.js"></script>
+    <script src="~/code-mirror/autorefresh.js"></script>
+    <script src="~/code-mirror/placeholder.js"></script>
+    <script src="~/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="~/lib/datetimepicker/moment-with-locales.js"></script>
+    <script src="~/lib/datetimepicker/datetimepicker.js"></script>
+    <script src="~/data-tables/datatables.min.js"></script>
+    <script src="~/data-tables/dataTables.bootstrap5.min.js"></script>
+    <script src="~/data-tables/dataTables.responsive.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

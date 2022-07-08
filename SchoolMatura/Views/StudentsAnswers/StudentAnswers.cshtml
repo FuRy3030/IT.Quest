@@ -1,0 +1,61 @@
+﻿@{
+     Layout = "_Layout";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/css/Questions.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StudentAnswers.css" asp-append-version="true" />
+}
+
+<div id="SubNavBar">
+    <h2></h2>
+    <h2></h2>
+    <h2 id="TestScore"></h2>
+</div>
+<div id="QuestionsWithAnswersList">
+
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="ErrorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Uwaga! Poczekaj chwilę</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="SuccessModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Zmiany zostały zapisane!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ocena i uwagi dotyczące tej pracy zostały zapisane! Teraz możesz przejść do poprawy kolejnej lub opuścić stronę.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" src="~/math-jax/math-jax.js"></script>
+    <script src="~/js/StudentAnswers.js"></script>
+}

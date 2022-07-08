@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+   <link rel="stylesheet" href="~/css/SessionsList.css" asp-append-version="true" />
+}
+
+<div class="container-fluid">
+    <div class="results-img-section">
+        <div class="results-img-section-text">
+            <h2 class="big-heading">Eksportuj <span style="color: #002eef;">Wyniki</span></h2>
+            <h6 class="sub-heading">
+                Wybierz i kliknij sesję dla której chcesz eksportować wyniki wszystkich uczniów, którzy wysłali swoje odpowiedzi.
+                Zestawione wyniki będziesz mógł / mogła potem zapisać na swoim komputerze w wybranych formatach.
+            </h6>
+        </div>
+        <img src="~/images/grades-svg.svg" alt="-" />
+    </div>
+    <div id="ResultsHeader">
+        <div class="input-group complex-input-shared">
+            <input type="text" class="form-control" placeholder="Wpisz tytuł sesji..." />
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <select class="form-select sorting-select">
+            <option value="0" selected>Sortuj według...</option>
+            <option value="1">Najnowsze</option>
+            <option value="2">Najstarsze</option>
+            <option value="3">Z największą liczbą uczniów</option>
+            <option value="4">Z najmniejszą liczbą uczniów</option>
+        </select>
+    </div>
+    <div id="SessionsList">
+        <!-- <div class="session">
+            <span class="type-icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <h4 class="title">Test dla 3Dg</h4>
+            <h4 class="date">Wygasa 2022-06-07 14:04:32</h4>
+            <h4 class="session-blue students">20 Uczniów</h4>
+        </div> -->
+    </div>
+    <div class="empty-list" id="SessionsEmptyList" style="margin-bottom: 3.5vh;">
+        <img src="~/images/empty-svg.svg" alt="-" />
+        <h4>Nic nie znaleziono...</h4>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="~/js/SessionsList.js"></script>
+}

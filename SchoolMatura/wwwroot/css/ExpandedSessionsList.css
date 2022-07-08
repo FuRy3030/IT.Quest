@@ -1,0 +1,318 @@
+﻿.sessions-img-section {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    margin-top: 5vh;
+}
+
+.sessions-img-section-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.sessions-img-section-text h2 {
+    width: 100%;
+    margin-bottom: 5vh !important;
+}
+
+.sessions-img-section-text h6 {
+    width: 100%;
+    text-align: justify !important;
+}
+
+.sessions-img-section img {
+    width: 50%;
+    height: 100%;
+}
+
+#SessionsHeader {
+    width: 100%;
+    padding: 4.5vh 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid rgb(213, 213, 219);
+}
+
+#SessionsHeader .complex-input-shared {
+    width: 50%;
+}
+
+#SessionsList {
+    width: 87.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    flex-wrap: wrap;
+    margin-bottom: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px !important;
+}
+
+.list-groupper-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75vh;
+    margin-top: 3vh;
+    cursor: default;
+}
+
+.list-groupper-header span {
+    font-size: 1.4vw;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    color: #303545;
+    width: auto;
+}
+
+.list-groupper-header .list-groupper-header-divider {
+    flex: 2;
+    height: 1px;
+    margin-left: 1.25vw;
+    background: #cbcccf;
+}
+
+.session-shortcut {
+    display: flex;
+    align-items: stretch;
+    border-radius: 18px;
+    margin: 1.75vh 0;
+    -webkit-box-shadow: 0px 0px 12px 0px rgb(220, 220, 227);
+    -moz-box-shadow: 0px 0px 12px 0px rgb(220, 220, 227);
+    box-shadow: 0px 0px 12px 0px rgb(220, 220, 227);
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.session-shortcut-popup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100%);
+    width: calc(100%);
+    border-radius: 18px;
+    background: #E8E2F7;
+    transition: all 0.15s ease-in-out;
+    opacity: 0;
+    z-index: 4;
+    text-decoration: none !important;
+}
+
+.session-shortcut-popup span {
+    font-size: 3.55vw;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    color: #802FDE;
+    width: auto;
+    text-align: center;
+    transition: all 0.45s ease-in-out;
+    transform: translateY(7vh);
+    margin-right: 7.5vw;
+    text-decoration: none !important;
+}
+
+.session-shortcut-popup i {
+    font-size: 4.6vw;
+    color: #802FDE;
+    transition: all 0.45s ease-in-out;
+    transform: translateY(7vh);
+    width: auto;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.session-shortcut:hover .session-shortcut-popup {
+    opacity: 1;
+}
+
+.session-shortcut:hover .session-shortcut-popup span {
+    transform: translateY(0vh);
+}
+
+.session-shortcut:hover .session-shortcut-popup i {
+    transform: translateY(0vh);
+}
+
+.session-shortcut-test-takers {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding: 12px 1.5vw 12px 1.5vw;
+    background-color: var(--blurple);
+}
+
+.session-shortcut-test-takers span {
+    margin-top: 1.15vh;
+    font-size: 1.25vw;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.outer-circle-div {
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(150,137,230,1) 0%, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle-div {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blurple);
+    z-index: 3;
+    font-size: 1.3vw;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.session-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    padding: 12px 2vw 12px 2vw;
+    position: relative;
+}
+
+.session-details .takers-names {
+    font-size: 1.35vw;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(95, 95, 192);
+    width: 100%;
+}
+
+.session-details .session-title {
+    font-size: 2.35vw;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    color: var(--black-alternative);
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.session-state {
+    display: flex;
+    flex-direction: column;
+    width: 27.5%;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 12px 1.5vw 12px 1.5vw;
+    background-color: transparent;
+    height: 100%;
+}
+
+.session-state span {
+    margin-top: 1.15vh;
+    font-size: 1.05vw;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.session-state .inner-circle-div {
+    background-color: white;
+}
+
+.session-state-active {
+    border-left: #0652DD solid 3px;
+}
+
+.session-state-active span {
+    color: #0652DD !important;
+}
+
+.session-state-active .outer-circle-div {
+    background: linear-gradient(90deg, rgba(6,82,221,1) 0%, rgba(96,150,251,1) 100%) !important;
+}
+
+.session-state-active .inner-circle-div {
+    color: #0652DD !important;
+} 
+
+.session-state-finished {
+    border-left: #28a745 solid 3px;
+}
+
+.session-state-finished span {
+    color: #28a745 !important;
+}
+
+.session-state-finished .outer-circle-div {
+    background: linear-gradient(90deg, rgba(40,167,69,1) 0%, rgba(74,211,106,1) 100%) !important;
+}
+
+.session-state-finished .inner-circle-div {
+    color: #28a745 !important;
+}
+
+.session-state-not-started {
+    border-left: #00ffff solid 3px;
+}
+
+.session-state-not-started span {
+    color: #00ffff !important;
+}
+
+.session-state-not-started .outer-circle-div {
+    background: linear-gradient(90deg, rgba(0,224,224,1) 0%, rgba(71,255,255,1) 100%) !important;
+}
+
+.session-state-not-started .inner-circle-div {
+    color: #00ffff !important;
+}
+
+.bold {
+    font-weight: 900;
+    color: var(--main-blue);
+}
+
+.sorting-select {
+    width: 25%;
+    transition: all 0.5s ease;
+    border: 1px solid rgb(215, 215, 222);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.35vw;
+    color: #25265e;
+    padding: 2vh 4vw 2vh 2vw;
+    border-radius: 18px;
+    -webkit-box-shadow: 0px 3px 9px 0px rgb(209 209 214);
+    -moz-box-shadow: 0px 3px 9px 0px rgb(209 209 214);
+    box-shadow: 0px 3px 9px 0px rgb(209 209 214);
+}

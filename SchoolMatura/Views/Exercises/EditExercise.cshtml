@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/css/EditExercise.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NewSet.css" asp-append-version="true" />
+}
+
+<div id="SubNavBar">
+    <h2>Nie utworzyłeś / utworzyłaś jeszcze żadnego szkicu</h2>
+    <button>Zapisz Zadanie <i class="fa-solid fa-cloud-arrow-up"></i></button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group standard-input-group">
+                <span class="input-group-text">Tytuł Zadania:</span>
+                <input type="text" class="form-control" placeholder="Wpisz tytuł nowego zadania...">
+            </div>
+            <div class="questions-types-whole-div" style="margin-top: 1vh;">
+                <h2>Rodzaj Pytania:</h2>
+                <div class="question-types">
+                    <span style="border-right: 2px dashed #3742fa;">
+                        Prawda / Fałsz
+                    </span>
+                    <span class="active-question-type" style="border-right: 2px dashed #3742fa;">
+                        Zwykłe Otwarte
+                    </span>
+                    <span>Programistyczne</span>
+                </div>
+            </div>
+            <ul id="ExercisesList" style="list-style: none;">
+                
+            </ul>
+            <div class="empty-list">
+                <img src="~/images/add-exercise-svg.svg" alt="-" />
+                <h4>Dodaj szkielet nowego pytania i uzupełnij go treścią</h4>
+            </div>
+            <button class="two-parts-button" id="AddExerciseButton">
+                <span class="text-part">Stwórz Nowe Zadanie</span>
+                <span><i class="fa-solid fa-plus"></i></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="TrueFalseModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Wybierz liczbę podpunktów</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Wybierz ile pytań prawda / fałsz ma przypadać na jedno stworzone zadanie. 
+                    Dokładnie taka liczba podpunktów gotowych do edycji zostanie stworzona do kolejnego zadania.
+                </p>
+                <div class="input-group standard-input-group" id="TrueFalseInputGroup">
+                    <span class="input-group-text">Liczba Podpunktów:</span>
+                    <input type="text" class="form-control" placeholder="Liczba mniejsza niż 10">
+                </div>
+                <h6 class="text-danger warning">Liczba podpunktów musi być mniejsza od 10!</h6>
+            </div>
+            <div class="modal-footer">
+                <button id="TrueFalseCreate" type="button" class="btn btn-primary">
+                    Dodaj Do Listy <i class="fa-solid fa-circle-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="ErrorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Uwaga! Poczekaj chwilę</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="~/js/EditExercise.js"></script>
+}

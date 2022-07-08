@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+   <link rel="stylesheet" href="~/css/Questions.css" asp-append-version="true" />
+}
+
+@using AspNetCore.ReCaptcha;
+@Html.ReCaptcha();
+
+<div id="QuestionsList">
+    <!-- <div class="container" id="Exercise-1">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8 question-column">
+                <div class="question-content">
+                    <p style="text-align: justify;"><span style="font-size: 12pt;">W postaci pseudokodu lub w wybranym języku programowania napisz algorytm, który dla </span><span style="font-size: 12pt;">dodatniej liczby całkowitej n obliczy jej cyfrowe dopełnienie d. O liczbie n wiadomo, że jej </span><span style="font-size: 12pt;">najbardziej znacząca cyfra jest większa od 0 i mniejsza od 9.</span><br><span style="font-size: 12pt;"><strong>Uwaga: Twój algorytm może używać wyłącznie zmiennych przechowujących liczby </strong></span><span style="font-size: 12pt;"><strong>całkowite oraz może operować wyłącznie na liczbach całkowitych.</strong> W zapisie algorytmu </span><span style="font-size: 12pt;">możesz korzystać tylko z instrukcji sterujących, operatorów arytmetycznych: dodawania, </span><span style="font-size: 12pt;">odejmowania, mnożenia, dzielenia, dzielenia całkowitego i reszty z dzielenia; operatorów </span><span style="font-size: 12pt;">logicznych, porównań i instrukcji przypisywania lub samodzielnie napisanych funkcji i procedur </span><span style="font-size: 12pt;">wykorzystujących powyższe operacje. <strong>Zabronione</strong> jest używanie funkcji wbudowanych </span><span style="font-size: 12pt;">dostępnych w językach programowania. Nie wolno w szczególności korzystać z żadnych funkcji </span><span style="font-size: 12pt;">zamiany z typu znakowego lub napisowego na liczbowy i odwrotnie.&nbsp;</span></p>
+                </div>
+                <textarea id="Question-1"></textarea>
+                <div class="navigation-buttons">
+                    <button class="icon-button">
+                        <i class="fa-solid fa-angle-right"></i> Następne Pytanie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="true-false-sub-question-content">
+
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" value="true" />
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" value="false" />
+    </div> -->
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="AutoSaveModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Niezapisane Odpowiedzi!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Wygląda na to, że nie wysłałeś swoich ostatnich rozwiązań. Możesz skorzystać z możliwości ich przywrócenia i załadowania do odpowiednich pytań.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="RestoreButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Przywróć <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="SuccessSubmitModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Odpowiedzi zostały zapisane!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Twoje odpowiedzi zostały poprawnie wysłane i zapisane! Możesz teraz zamknąć to okno.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="ErrorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Coś poszło nie tak!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Twój plik albo jest za duży, albo ma niewłaściwy format! Załączony przez Ciebie plik musi mieć wielkość mniejszą niż 50KB oraz jego rozszerzenie musi być zgodne z językiem określonym w treści zadania. Załącz inny plik i spróbuj ponownie.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" src="~/math-jax/math-jax.js"></script>
+    <script src="~/js/Questions.js"></script>
+}

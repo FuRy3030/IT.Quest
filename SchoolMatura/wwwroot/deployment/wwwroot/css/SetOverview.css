@@ -1,0 +1,743 @@
+﻿.navbar {
+    margin-bottom: 0px !important;
+    border: none !important;
+}
+
+#SubNavBar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 2.5vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    z-index: 5;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    -webkit-box-shadow: 0px 1px 4px 0px rgb(217, 217, 220);
+    -moz-box-shadow: 0px 1px 4px 0px rgb(217, 217, 220);
+    box-shadow: 0px 4px 15px 6px rgb(0 0 0 / 16%);
+    margin-bottom: 1.5vh;
+}
+
+#SubNavBar h2 {
+    margin-bottom: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.5vw;
+    padding: 1vh 0;
+    text-align: center;
+    color: #25265e;
+    cursor: default;
+}
+
+#SubNavBar h2 span {
+    color: var(--main-blue);
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    margin-left: 0.5vw;
+    margin-right: 0.65vw;
+}
+
+#SubNavBar button {
+    border-radius: 12px;
+    padding: 1.25vh 2.5vw;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.4vw;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #1e90ff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#SubNavBar button:hover {
+    background-color: white;
+    color: #f9ca24;
+    -webkit-box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+    -moz-box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+    box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+}
+
+#SubNavBar button i {
+    padding-left: 0.5vw;
+}
+
+#SetOverviewContainer {
+    padding: 4vh 5.25vw;
+}
+
+.title-input-group {
+    border: 2px solid transparent !important;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.title-input-group input {
+    font-weight: 900;
+    font-size: 2vw;
+    color: var(--black-alternative);
+}
+
+.edit-set-icon {
+    cursor: pointer;
+    font-size: 1.75vw;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--main-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(203, 204, 214, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(203, 204, 214, 1);
+    box-shadow: 0px 0px 5px 0px rgba(203, 204, 214, 1);
+    transition: all 0.5s ease;
+}
+
+.edit-set-icon:hover {
+    background-color: var(--main-blue);
+    color: white;
+    box-shadow: none;
+}
+
+.description-input-group {
+    border: 2px solid transparent !important;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.description-input-group textarea {
+    font-weight: 700;
+    font-size: 1.4vw;
+    color: var(--black-alternative);
+}
+
+.input-gropup-active {
+    border: 2px solid var(--main-blue) !important;
+}
+
+#TestSessionCreator {
+    height: auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    width: 97.5%;
+    margin-right: auto;
+    -webkit-box-shadow: 0px 0.3125rem 1.25rem 0px rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0px 0.3125rem 1.25rem 0px rgb(0 0 0 / 16%); 
+    box-shadow: 0px 0.3125rem 1.25rem 0px rgb(0 0 0 / 16%);
+    display: flex;
+    flex-direction: column;
+}
+
+#TestSessionCreatorHeader {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.75vw;
+    color: rgb(0 0 0 / 90%);
+    margin-bottom: 4vh;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.date-picker-line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2.25vh;
+}
+
+.date-picker-line h4 {
+    margin-bottom: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: rgb(0 0 0 / 90%);
+    cursor: default;
+    width: auto;
+    text-align: center;
+    padding: 0 1.5vw;
+}
+
+.date-picker-line h4 i {
+    margin-right: 1vw;
+    position: relative;
+    top: 0.6px;
+}
+
+#DatePicker {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: rgb(0 0 0 / 90%);
+    cursor: pointer;
+    background-color: transparent;
+    width: auto;
+    border: none;
+    padding: 0px;
+    text-align: center;
+}
+
+#TestSessionCreator .standard-input-group {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.75vh;
+}
+
+#TestSessionCreator .standard-input-group:focus-within {
+    border-color: rgb(29, 28, 28);
+}
+
+#TestSessionCreator .standard-input-group input {
+    font-size: 1.5vw;
+}
+
+#TestSessionCreator .standard-input-group span {
+    font-size: 1.5vw;
+}
+
+#TestSessionCreatorExplanation {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.25vw;
+    color: rgb(0 0 0 / 90%);
+    margin-bottom: 3vh;
+    cursor: default;
+    text-align: justify;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.4vw;
+    color: white;
+    background-color: rgb(0 0 0 / 90%);
+    padding: 0.75vh 1.75vw;
+    border-radius: 18px;
+    border: none;
+    transition: all 0.5s ease;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+.icon-button:hover {
+    transform: scale(1.05);
+}
+
+.icon-button i {
+    margin-right: 0.4vw;
+    position: relative;
+}
+
+#ExercisesListHeader {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5vh;
+    padding: 3.5vh 0;
+    margin-bottom: 4vh;
+    border-bottom: 1px solid rgb(210, 210, 218);
+}
+
+#ExercisesListHeader div {
+    width: 45%;
+}
+
+#ExercisesListHeader div input {
+    padding: 1.4vh 2vw;
+}
+
+#ExercisesListHeader div span {
+    padding: 1.4vh 2vw;
+}
+
+#ExerciseCounter {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.5vw;
+    color: #25265e;
+    text-align: center;
+    margin-bottom: 0vh;
+    cursor: default;
+    width: auto;
+}
+
+#ExercisesList {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0px !important;
+}
+
+.exercise-shortcut {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 7.5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0.3125rem 1.25rem 0px rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0px 0.3125rem 1.25rem 0px rgb(0 0 0 / 16%); 
+    box-shadow: 0px 0.15rem 0.5rem 0px rgb(0 0 0 / 16%);
+    padding: 20px;
+    margin-bottom: 4vh;
+}
+
+.exercise-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.9vh;
+    margin-bottom: 2.5vh;
+    border-bottom: 1px solid rgb(227, 227, 233);
+}
+
+.exercise-shortcut i {
+    padding: 0 0.25vw;
+    font-size: 1.4vw;
+    color: #f9ca24;
+    cursor: default;
+}
+
+.question-points {
+    padding: 0 2vw;
+    font-size: 1.675vw;
+    color: var(--black-alternative);
+    cursor: default;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.question-type {
+    padding: 0 2vw;
+    font-size: 1.675vw;
+    color: var(--black-alternative);
+    cursor: default;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.question-order {
+    padding: 0 2vw;
+    font-size: 1.675vw;
+    color: var(--black-alternative);
+    cursor: default;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.question-type span {
+    color: var(--main-blue);
+    margin-left: 0.75vw;
+}
+
+.question-points span {
+    color: var(--main-blue);
+    margin-left: 0.75vw;
+}
+
+.content {
+    height: auto;
+    width: auto;
+    padding: 0 2.5vw;
+    cursor: default;
+    height: auto;
+}
+
+.exercise-sub-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1.75vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0vh;
+    border-top: 1px solid rgb(227, 227, 233);
+}
+
+.question-hashtags {
+    padding: 0 2vw;
+    font-size: 1.4vw;
+    color: var(--black-alternative);
+    cursor: default;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.question-hashtags span {
+    margin-left: 1.4vw;
+}
+
+#RightPanel {
+    width: 30vw;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    background-color: #001D8F;
+    display: flex;
+}
+
+#Wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#Content {
+    width: 70vw;
+    height: 100%;
+}
+
+#SessionsShortcuts {
+    width: 28%;
+    height: 100vh;
+    background-color: rgba(0, 33, 163, 0.35);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#SessionsAndResults {
+    width: 72%;
+    height: 100vh;
+    background-color: #0021A3;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sessions-shortcuts-big-icon {
+    color: white;
+    font-size: 2.75vw;
+    margin-bottom: 1.65vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5vh;
+}
+
+.sessions-shortcuts-text {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    cursor: default;
+    margin-bottom: 2.5vh;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+#RecentSessionsList {
+    list-style: none;
+    margin-bottom: 0px;
+    flex: 2;
+    width: 100%;
+    padding: 0px !important;
+    background-color: rgba(0, 33, 163, 0.65);
+}
+
+#RecentSessionsList .session-shortcut {
+    margin: 3.55vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: default !important;
+}
+
+/* #RecentSessionsList .session-shortcut:hover i {
+    color: #f9ca24 !important;
+}
+
+#RecentSessionsList .session-shortcut:hover h5 {
+    color: #f9ca24 !important;
+    text-shadow: 0px 0px 10.5px #f9ca24;
+} */
+
+#RecentSessionsList i {
+    color: white;
+    margin-top: 0vh !important;
+    transition: all 0.65s ease;
+}
+
+.sessions-shortcuts-text-small {
+    color: white;
+    text-shadow: 0px 0px 10.5px white;
+    font-size: 1.15vw !important;
+    margin-bottom: 0vh;
+    cursor: pointer !important;
+    transition: all 0.65s ease;
+}
+
+#AllSessionsList {
+    list-style: none;
+    margin-bottom: 0px;
+    flex: 2;
+    width: 100%;
+    padding: 0px !important;
+}
+
+#AllSessionsList .session-shortcut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 2vh 0vw;
+    justify-content: center;
+}
+
+#AllSessionsList .session-shortcut .session-shortcut-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#AllSessionsList .session-shortcut i {
+    color: white;
+    font-size: 2.75vw;
+    padding: 1vh 1.5vw 1vh 1vw;
+    transition: all 0.65s ease;
+    color: #5475ff;
+    text-shadow: 0px 0px 10.5px #5475ff;
+}
+
+#AllSessionsList .session-shortcut .session-shortcut-details h6 {
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    margin: 0px !important;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.15vw;
+    overflow: hidden;
+    transition: all 0.65s ease;
+    color: #5475ff;
+    text-shadow: 0px 0px 10px #5475ff;
+    text-align: left;
+    width: max-content;
+}
+
+#AllSessionsList .session-shortcut:hover i {
+    color: #f9ca24 !important;
+    text-shadow: 0px 0px 10.5px #f9ca24;
+}
+
+#AllSessionsList .session-shortcut:hover .session-shortcut-details h6 {
+    color: #f9ca24 !important;
+    text-shadow: 0px 0px 10px #f9ca24;
+}
+
+#AllSessionsList button {
+    font-size: 1.15vw;
+    width: 80%;
+    background-color: white;
+    color: var(--main-blue);
+    margin-bottom: 4vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0.75vh 0;
+}
+
+#Results {
+    width: 72%;
+    height: 100vh;
+    background-color: #0021A3;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#ResultsList {
+    list-style: none;
+    margin-bottom: 0px;
+    flex: 2;
+    width: 100%;
+    padding: 0px !important;
+}
+
+#ResultsList .result-shortcut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 2vh 0vw;
+    justify-content: center;
+}
+
+#ResultsList .result-shortcut .result-shortcut-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#ResultsList .result-shortcut i {
+    color: white;
+    font-size: 2.75vw;
+    padding: 1vh 1.5vw 1vh 1vw;
+    transition: all 0.65s ease;
+    color: #5475ff;
+    text-shadow: 0px 0px 10.5px #5475ff;
+}
+
+#ResultsList .result-shortcut .result-shortcut-details h6 {
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    margin: 0px !important;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.15vw;
+    overflow: hidden;
+    transition: all 0.65s ease;
+    color: #5475ff;
+    text-shadow: 0px 0px 10px #5475ff;
+    text-align: left;
+    width: max-content;
+}
+
+#ResultsList .result-shortcut:hover i {
+    color: #f9ca24 !important;
+    text-shadow: 0px 0px 10.5px #f9ca24;
+}
+
+#ResultsList .result-shortcut:hover .result-shortcut-details h6 {
+    color: #f9ca24 !important;
+    text-shadow: 0px 0px 10px #f9ca24;
+}
+
+#Results button {
+    font-size: 1.15vw;
+    width: 80%;
+    background-color: white;
+    color: var(--main-blue);
+    margin-bottom: 4vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0.75vh 0;
+}
+
+#BackToSessionsButton {
+    margin-bottom: 3vh !important;
+    margin-top: 2vh !important;
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+    z-index: 5;
+    color: #0652DD !important;
+}
+
+/* Calendar Classes */
+
+.dtp_modal-cell-time {
+    display: flex;
+    flex-direction: column;
+    border-right: none !important;
+}
+
+.dpt_modal-button {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    background-color: white;
+    color: var(--main-blue);
+    -webkit-box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+    -moz-box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+    box-shadow: 0px 1px 4px 0px rgb(184, 184, 188);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.dpt_modal-button:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    background-color: var(--main-blue);
+}
+
+.dtp_modal-cell-date {
+    border-left: 1px solid rgb(27, 26, 26);
+}
+
+.dtp_modal-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+
+/* Scrollbars */
+
+#SessionsAndResults {
+    scrollbar-width: thin;          
+    scrollbar-color: #001466 #0021A3; 
+}
+
+#SessionsAndResults::-webkit-scrollbar {
+    width: 10px;               
+}
+
+#SessionsAndResults::-webkit-scrollbar-track {
+    background: #0021A3;    
+}
+
+#SessionsAndResults::-webkit-scrollbar-thumb {
+    background-color: #001466;    
+    border-radius: 20px;       
+    border: 3px solid #0021A3; 
+}
+
+#Results {
+    scrollbar-width: thin;          
+    scrollbar-color: #001466 #0021A3; 
+}
+
+#Results::-webkit-scrollbar {
+    width: 10px;               
+}
+
+#Results::-webkit-scrollbar-track {
+    background: #0021A3;    
+}
+
+#Results::-webkit-scrollbar-thumb {
+    background-color: #001466;    
+    border-radius: 20px;       
+    border: 3px solid #0021A3; 
+}
+
+#SessionsShortcuts {
+    scrollbar-width: thin;          
+    scrollbar-color: #001466 #0021A3; 
+}
+
+#SessionsShortcuts::-webkit-scrollbar {
+    width: 5px;               
+}
+
+#SessionsShortcuts::-webkit-scrollbar-track {
+    background: #0021A3;    
+}
+
+#SessionsShortcuts::-webkit-scrollbar-thumb {
+    background-color: #001466;    
+    border-radius: 20px;       
+    border: 3px solid #0021A3; 
+}

@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/css/Questions.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StudentAnswers.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SessionDetails.css" asp-append-version="true" />
+}
+
+<div id="Wrapper">
+    <div id="LeftPanelWrapper">
+        <div id="LeftPanel">
+            <div class="left-panel-box">
+                <h5>10</h5>
+                <h6>Wysłanych Prac</h6>
+                <span>Zobacz Podsumowanie</span>
+            </div>
+            <div class="divider"></div>
+            <div class="input-group standard-input-group left-panel-input-group">
+                <span class="input-group-text">Nazwa Sesji</span>
+                <input id="SessionName" type="text" class="form-control" placeholder="Wpisz nazwę sesji...">
+            </div>
+            <div class="input-group left-panel-date-group">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left"></i> Data rozpoczęcia</span>
+                <div class="date-picker-new-session date-picker-start" id="DatePickerStart"></div>
+            </div>
+            <div class="input-group left-panel-date-group">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left"></i> Data wygaśnięcia</span>
+                <div class="date-picker-new-session date-picker-end" id="DatePickerEnd"></div>
+            </div>
+            <button class="icon-button">
+                Zapisz Zmiany <i class="fa-solid fa-check-double"></i>
+            </button>
+        </div>
+    </div>
+    <div id="MainContent">
+        <div id="FilterAndSort">
+            <div class="filter-row">
+                <div class="input-group complex-input-shared">
+                    <input type="text" class="form-control" placeholder="Wpisz imię lub nazwisko ucznia..." />
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <select class="form-select sorting-select">
+                    <option selected value="-1">Sortuj według...</option>
+                    <option value="0">Ostatnie Prace</option>
+                    <option value="1">Najstarsze Prace</option>
+                    <option value="2">Nazwisko i imię rosnąco (A -> Z)</option>
+                    <option value="3">Nazwisko i imię malejąco (Z -> A)</option>
+                </select>
+            </div>
+            <div class="filter-row">
+                <h2 class="grouping-selector grouping-selector-active">
+                    <i class="fa-solid fa-bars"></i> Wszystkie
+                </h2>
+                <h2 class="grouping-selector">
+                    <i class="fa-regular fa-circle"></i> Nowe / Nie ocenione
+                </h2>
+                <h2 class="grouping-selector">
+                    <i class="fa-solid fa-circle-half-stroke"></i> Częściowo Ocenione
+                </h2>
+                <h2 class="grouping-selector">
+                    <i class="fa-solid fa-circle-check"></i> Ocenione
+                </h2>
+            </div>
+            <div class="divider"></div>
+            <h2 class="students-header">Uczniowie, którzy wysłali swoje odpowiedzi</h2>
+            <div id="UsersWithAnswers">
+                <!-- <div class="session-taker-shortcut">
+                    <div class="session-taker-details">
+                        <span class="extra-info">Oddano o 15:48 11-10-2022</span>
+                        <span class="credentials">Adam Duda</span>
+                    </div>
+                    <div class="session-taker-marking-info marking-info-graded">
+                        <span class="marking-state">Oceniono!</span>
+                        <span class="marking-how-many-marked">Zadania zostały ocenione</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%;" 
+                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div> -->
+            </div>
+            <div class="empty-list" id="UsersWithAnswersEmptyList" style="margin-bottom: 3.5vh; margin-top: 2.5vh;">
+                <img src="~/images/empty-svg.svg" alt="-" />
+                <h4>Nic nie znaleziono...</h4>
+            </div>
+            <h2 class="students-header">Uczniowie, którzy wysłali prace bez odpowiedzi</h2>
+            <div id="UsersWithoutAnswers">
+
+            </div>
+            <div class="empty-list" id="UsersWithoutAnswersEmptyList" style="margin-bottom: 3.5vh; margin-top: 2.5vh;">
+                <img src="~/images/empty-svg.svg" alt="-" />
+                <h4>Nic nie znaleziono...</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="ErrorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Uwaga! Poczekaj chwilę</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade site-modal" tabindex="-1" id="SuccessModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Zmiany zostały zapisane!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Zamknij <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" src="~/math-jax/math-jax.js"></script>
+    <script src="~/js/SessionDetails.js"></script>
+}

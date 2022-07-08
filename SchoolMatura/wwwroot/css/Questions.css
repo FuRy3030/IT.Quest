@@ -1,0 +1,389 @@
+﻿.question-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-content {
+    margin-bottom: 4.5vh;
+    width: 100%;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+.icon-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: white;
+    background-color: #6C63FF;
+    padding: 10px 47.5px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    width: 100%;
+    margin-top: 4vh;
+    margin-bottom: 2.5vh;
+    border: none;
+    width: auto;
+    box-shadow: none;
+}
+
+.icon-button:hover {
+    background-color: white;
+    color: #6C63FF;
+    -webkit-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    -moz-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+    box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+}
+
+.icon-button i {
+    margin-right: 0.4vw;
+    position: relative;
+    top: 0.9px;
+}
+
+.left-button {
+    margin-right: auto;
+}
+
+.question-header {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--black-alternative);
+    margin-bottom: 3vh;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.25vh;
+    cursor: default;
+}
+
+.true-false-sub-question {
+    width: 100%;
+    margin-bottom: 2.5vh;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(231, 234, 238);
+    border-radius: 15px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(223, 225, 232, 1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(223, 225, 232, 1);
+    box-shadow: 0px 0px 4px 0px rgba(223, 225, 232, 1);
+}
+
+.true-false-sub-question-content {
+    flex: 2;
+    height: auto;
+}
+
+.true-false-check {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+.question-sub-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    cursor: default !important;
+}
+
+.short-span {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 23.5px;
+    color: var(--black-alternative);
+    margin-bottom: 3vh;
+    margin-top: 0.5vh;
+    width: 18%;
+    text-align: center;
+}
+
+.long-span {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 23.5px;
+    color: var(--black-alternative);
+    margin-bottom: 3vh;
+    margin-top: 0.5vh;
+    flex: 2;
+    text-align: center;
+}
+
+#RestoreButton {
+    margin-right: auto;
+}
+
+.file-input {
+    width: 0.05px;
+    padding: 0px !important;
+    border: none !important;
+}
+
+.file-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3.5vh;
+}
+
+.file-section-non-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3.5vh;
+}
+
+.file-browser {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--black-alternative);
+    margin-bottom: 0.1vh;
+    cursor: default;
+}
+
+.file-browser .file-button {
+    cursor: pointer !important;
+    color: var(--main-blue);
+    margin: 0px 4px;
+    font-weight: 800;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.file-button .pure-text {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: inherit !important;
+}
+
+.file-browser .file-button:hover {
+    transform: scale(1.05);
+    color: #f9ca24;
+}
+
+.current-file-shortcut {
+    margin-top: 3vh;
+    width: 80%;
+    border: 2px solid var(--main-blue);
+    border-radius: 18px;
+    background-color: transparent;
+    display: none;
+    align-items: center;
+    padding: 12.5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.current-file-shortcut i {
+    color: var(--main-blue);
+    font-size: 31px;
+    padding: 0px 25px;
+}
+
+.current-file-shortcut h5 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 19.5px;
+    color: var(--main-blue);
+    margin-bottom: 0vh;
+    flex: 2;
+    cursor: default;
+}
+
+.CodeMirror {
+    margin-bottom: 0.5vh;
+    border-radius: 7px;
+    margin-top: 0vh;
+}
+
+.CodeMirror-sizer {
+    margin-left: 36px;
+}
+
+.alert-clause {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 19.5px;
+    color: var(--black-alternative);
+    margin-bottom: 2.25vh;
+    cursor: default;
+    text-align: justify;
+}
+
+.drag-drop {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px rgba(87, 87, 90, 0.2);
+    border-radius: 35px;
+    display: block;
+    padding: 20.5px;
+    width: 100%;
+}
+
+.drag-drop-header {
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 6px;
+    color: #23293b;
+    cursor: default;
+}
+
+.drag-drop-header-small {
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    cursor: default;
+}
+
+.drag-area {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    border: 6px dashed rgba(30, 144, 255, 0.4);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(30, 144, 255, 0.05);
+}
+
+    .drag-area.active {
+        border: 6px dashed rgba(0, 74, 221, 0.85);
+        background-color: rgba(0, 74, 221, 0.1);
+    }
+
+.drag-drop-big {
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.45rem;
+    color: #23293b;
+    cursor: default;
+}
+
+.drag-drop-small {
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 17px;
+    cursor: default;
+}
+
+.drag-area button {
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.45rem;
+    border: none;
+    background-color: inherit;
+    color: #1B9CFC;
+    padding: 0px;
+}
+
+    .drag-area button i {
+        opacity: 1;
+    }
+
+    .drag-area button:hover {
+        animation: bump 0.75s ease-in-out;
+    }
+
+    @keyframes bump {
+        0% {
+            transform: scale(1);
+        }
+        33% {
+            transform: scale(0.85);
+        }
+        66% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+.drag-drop-small-icons img {
+    margin: 10px;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.drag-big-icon {
+    margin-bottom: 17px;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.uploaded-file {
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    display: none;
+}
+
+.no-select {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.uploaded-file-description {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
+
+    .uploaded-file-description h2 {
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.45rem;
+        color: #23293b;
+        margin-bottom: 0.35rem;
+    }
+
+    .uploaded-file-description i {
+        color: #004aad;
+    }
+
+    .uploaded-file-description .progress {
+        height: 18px;
+    }
+
+    .uploaded-file-description .progress-bar {
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
+        height: 18px;
+        font-size: 0.9rem;
+    }
+
+.error-message {
+    color: red;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    display: none;
+}
+
+#ErrorText {
+    position: relative;
+    top: -30px;
+}

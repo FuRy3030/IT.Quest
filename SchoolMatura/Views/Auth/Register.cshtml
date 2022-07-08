@@ -1,0 +1,119 @@
+﻿@using SchoolMatura
+@using SchoolMatura.Models
+
+@model SchoolMatura.Models.AuthModels.Register
+@{
+     Layout = "_Layout";
+}
+
+@using Microsoft.Extensions.Options;
+@inject IOptions<GoogleCaptchaConfig> GoogleCaptchaConfig;
+
+<style>
+    .auth-heading {
+        font-size: 35px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        margin-bottom: 30px;
+        color: #25265e;
+        text-align: center;
+    }
+
+    .auth-button {
+        font-size: 20px !important;
+        font-family: 'Nunito', sans-serif;
+        background-color: #3742fa !important;
+        color: white !important;
+        border-radius: 16px !important;
+        border: 1px solid #3742fa !important;
+        padding: 6px 0px !important;
+        transition: all 0.5s ease-in-out !important;
+        font-weight: 800 !important;
+        text-align: center;
+        width: 100%;
+        margin-top: 17.5px;
+        margin-bottom: 55px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .auth-button i {
+        margin-right: 7.5px;
+        position: relative;
+        top: 0.5px;
+    }
+
+    .auth-button:hover {
+        background-color: white !important;
+        color: #6C63FF !important;
+        -webkit-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+        -moz-box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+        box-shadow: 0px 2px 7px 0px rgb(182, 182, 186);
+        border: 1px solid white !important;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-lg-4">
+            <h1 class="auth-heading">Załóż nowe konto</h1>
+
+            <form method="post" asp-action="CreateNewUser">
+                <input type="hidden" id="TokenField" asp-for="Token" />
+                <div class="mb-3">
+                    <label class="form-label" asp-for="FirstName">Imię</label>
+                    <input type="text" asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="LastName">Nazwisko</label>
+                    <input type="text" asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Email">Adres Email</label>
+                    <input type="text" asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Password">Hasło</label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ConfirmPassword">Powtórz Hasło</label>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="All" class="text-danger mb-3">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary auth-button">
+                        <i class="fa-solid fa-angle-right"></i> Stwórz Nowe Konto
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script src="https://www.google.com/recaptcha/api.js?render=@GoogleCaptchaConfig.Value.SiteKey"></script>
+    <script>
+      $(function() {
+        grecaptcha.ready(function() {
+          grecaptcha.execute('@GoogleCaptchaConfig.Value.SiteKey', {action: 'submit'}).then(function(token) {
+              console.log(token);
+              document.getElementById('TokenField').value = token;
+          });
+        });
+      });
+    </script>
+}
+
+
+
+
+
