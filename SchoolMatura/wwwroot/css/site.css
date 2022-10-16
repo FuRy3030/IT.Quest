@@ -91,11 +91,11 @@ body::-webkit-scrollbar-thumb {
 
 .navbar-link-alt {
   font-weight: 800 !important;
-  font-size: 1.45vw !important;
+  font-size: 1.4vw !important;
   color: white !important;
   font-family: 'Nunito', sans-serif !important;
-  padding-left: 2vw !important;
-  padding-right: 2vw !important;
+  padding-left: 1.25vw !important;
+  padding-right: 1.25vw !important;
   transition: all 0.5s ease !important;
 }
 

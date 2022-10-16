@@ -245,10 +245,13 @@ class RenderContent {
                 type="file" id="SubmitFileAnswer" />`;
 
             const CurrentFileShortcut = document.createElement('div');
-            CurrentFileShortcut.classList.add('current-file-shortcut');
-            CurrentFileShortcut.innerHTML = `<i class="fa-solid fa-file-code"></i>
-            <h5></h5>
-            <i class="fa-regular fa-circle-check"></i>`;
+            CurrentFileShortcut.classList.add('current-file-manage-div');
+            CurrentFileShortcut.innerHTML = `<div class="current-file-shortcut">
+                <i class="fa-solid fa-file-code"></i>
+                <h5></h5>
+                <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <i class="fa-solid fa-xmark current-file-delete-button"></i>`;
 
             $(FileSection).insertBefore($(Question).find('.question-column .navigation-buttons'));
             $(CurrentFileShortcut).insertBefore($(Question).find('.question-column .navigation-buttons'));
@@ -286,14 +289,23 @@ class RenderContent {
                 console.log(Name);
 
                 if (Extensions.includes(FileExtension) && Size <= 50) {
-                    $(CurrentFileShortcut).children('h5').text(Name.toString());
+                    $(CurrentFileShortcut).find('h5').text(Name.toString());
                     $(CurrentFileShortcut).css('display', 'flex');
+                    $(EditorObject).css('display', 'none');
+                    $(EditorObject).siblings('.alert-clause').last().css('display', 'none');
                 }
                 else {
                     $(CurrentFileShortcut).css('display', 'none');
                     var ErrorModal = new bootstrap.Modal(document.getElementById('ErrorModal'));
                     ErrorModal.show();
                 }
+            });
+
+            $(CurrentFileShortcut).children('.current-file-delete-button').on('click', function() {
+                $(CurrentFileShortcut).css('display', 'none');
+                $(EditorObject).css('display', 'block');
+                $(EditorObject).siblings('.alert-clause').last().css('display', 'block');
+                $(Question).find('.file-input')[0].value = null;
             });
         }
         else {
@@ -615,7 +627,7 @@ class RenderContent {
                 DataManagement.SubmitAnswers(UserAnswers, RenderContent.QuestionsData[0].TakerIdentifier).then(() => {
                     let FileData = new FormData();
 
-                    $('#QuestionsList').find('.current-file-shortcut').each(function() {
+                    $('#QuestionsList').find('.current-file-manage-div').each(function() {
                         const Order = $(this).siblings('.question-header').text().substring(8);
                         let Extensions = $(this).prev().find('input').data('extensions').toString();
                         let Language = '';
@@ -849,7 +861,7 @@ class RenderContent {
                 DataManagement.SubmitAnswers(UserAnswers, RenderContent.QuestionsData[0].TakerIdentifier).then(() => {
                     let FileData = new FormData();
 
-                    $('#QuestionsList').find('.current-file-shortcut').each(function() {
+                    $('#QuestionsList').find('.current-file-manage-div').each(function() {
                         const Order = $(this).siblings('.question-header').text().substring(8);
                         let Extensions = $(this).prev().find('input').data('extensions').toString();
                         let Language = '';

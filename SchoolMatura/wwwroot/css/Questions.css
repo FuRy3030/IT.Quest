@@ -176,13 +176,30 @@
     color: #f9ca24;
 }
 
-.current-file-shortcut {
+.current-file-manage-div {
+    display: none;
+    justify-content: center;
+    align-items: center;
     margin-top: 3vh;
+    width: 100%;
+}
+
+.current-file-delete-button {
+    color: #FF7F7F;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 12%;
+}
+
+.current-file-shortcut {
     width: 80%;
     border: 2px solid var(--main-blue);
     border-radius: 18px;
     background-color: transparent;
-    display: none;
+    display: flex;
     align-items: center;
     padding: 12.5px;
     margin-left: auto;

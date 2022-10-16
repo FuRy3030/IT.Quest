@@ -164,17 +164,25 @@ class RenderContent {
                 <span class="line">
                     Link Do Sesji: 
                     <span data-bs-toggle="tooltip" data-bs-placement="bottom" class="copy-element"
-                        title="(Aby skopiować kliknij) Podaj ten link swoim uczniom aby mogli rozwiązać udostępniony przez Ciebie zestaw zadań.">
-                        ${DataManagement.ConfigProtocol}/Testing/UserCredentials?Id=${GetGuidButton.getAttribute('data-identifier')}
+                        title="(Aby skopiować kliknij) Podaj ten link swoim uczniom aby mogli rozwiązać udostępniony przez Ciebie zestaw zadań."
+                        data-link="${DataManagement.ConfigProtocol}/Testing/UserCredentials?Id=${GetGuidButton.getAttribute('data-identifier')}">
+                        ${DataManagement.ConfigProtocol.substring(8)}/Testing/UserCredentials?Id=${GetGuidButton.getAttribute('data-identifier').substring(0, 1)}...
                     </span>
                     <i class="fa-solid fa-clipboard-check"></i>
                 </span>`
             );
 
-            $('#SubNavBar h2 .copy-element').on('click', function(event) {
+            $('#SubNavBar h2 .copy-element').first().on('click', function(event) {
                 event.preventDefault();
                 (async () => {
-                    await navigator.clipboard.writeText($(this.text()));
+                    await navigator.clipboard.writeText($(this).text());
+                })();
+            });
+
+            $('#SubNavBar h2 .copy-element').last().on('click', function(event) {
+                event.preventDefault();
+                (async () => {
+                    await navigator.clipboard.writeText($(this).data('link'));
                 })();
             });
 
