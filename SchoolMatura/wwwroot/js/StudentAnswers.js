@@ -185,7 +185,8 @@ class RenderContent {
             CodeAnswer.setAttribute('id', `Code-${Exercise.MainOrder}`);
             CodeAnswer.setAttribute('style', `display: none;`);
             $(CodeAnswer).insertBefore($(Question).find('.answer-points'));
-            console.log(Exercise.CodeAnswerLanguage);
+            
+            $(Question).find('.user-answer-header').text('Dodatkowe uwagi:');
 
             if (Exercise.CodeAnswerLanguage == 'Python') {
                 var Editor = CodeMirror.fromTextArea(document.getElementById(`Code-${Exercise.MainOrder}`), {

@@ -175,14 +175,14 @@ class RenderContent {
             $('#SubNavBar h2 .copy-element').first().on('click', function(event) {
                 event.preventDefault();
                 (async () => {
-                    await navigator.clipboard.writeText($(this).text());
+                    await navigator.clipboard.writeText($(this).text().trim());
                 })();
             });
 
             $('#SubNavBar h2 .copy-element').last().on('click', function(event) {
                 event.preventDefault();
                 (async () => {
-                    await navigator.clipboard.writeText($(this).data('link'));
+                    await navigator.clipboard.writeText($(this).data('link').trim());
                 })();
             });
 

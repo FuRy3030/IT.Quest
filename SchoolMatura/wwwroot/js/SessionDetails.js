@@ -411,6 +411,8 @@ class RenderContent {
             CodeAnswer.setAttribute('style', `display: none;`);
             $(CodeAnswer).insertBefore($(Question).find('.answer-points'));
 
+            $(Question).find('.user-answer-header').text('Dodatkowe uwagi:');
+
             if (Exercise.CodeAnswerLanguage == 'Python') {
                 var Editor = CodeMirror.fromTextArea(document.getElementById(`Code-${ID}-${Exercise.MainOrder}`), {
                     mode: 'python',

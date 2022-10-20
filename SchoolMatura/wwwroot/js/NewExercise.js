@@ -160,8 +160,8 @@ class RenderContent {
                 <button class="actions-list-button">Zapisz Zmiany <i class="fa-solid fa-check-double"></i></button>
                 <select class="form-select actions-list-select">
                     <option value="1" selected>Poprawna odpowiedź...</option>
-                    <option value="0">Prawda</option>
-                    <option value="1">Fałsz</option>
+                    <option value="1">Prawda</option>
+                    <option value="0">Fałsz</option>
                 </select>
             </div>
         </div>
