@@ -9,6 +9,16 @@ Problem sets could be reused many times for different assignments for several cl
 
 Additionally, the application allows for sending files, writing the code in the browser, or attaching it from the file. On top of that, it provides the teacher with an option to specify which programming language is required for a given exercise. Therefore, assignments involving databases or solving certain coding problems can be smoothly conducted through this system.
 
+## Technologies
+
+- HTML, CSS, JavaScript
+- jQuery, Bootstrap
+- C#, .NET Core
+- .NET Core MVC, Entity Framework Core
+
+## Videos
+
+https://user-images.githubusercontent.com/100144403/210099284-8506692d-b8ca-4690-aca7-5a104b4b3fdf.mp4
 
 ## Screenshots
 
